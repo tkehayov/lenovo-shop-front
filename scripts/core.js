@@ -1,3 +1,30 @@
+Vue.component('header-top',{
+	template: `<!-- Top Bar
+================================================== -->
+<div id="top-bar">
+	<div class="container">
+
+		<!-- Top Bar Menu -->
+		<div class="ten columns">
+			<ul class="top-bar-menu">
+				<li><i class="fa fa-phone"></i> <!-- TODO -->+359 898 684 599</li>
+				<li><i class="fa fa-envelope"></i> <a href="#">mail@example.com</a></li>
+			</ul>
+		</div>
+
+		<!-- Social Icons -->
+		<div class="six columns">
+			<ul class="social-icons">
+				<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
+				<li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
+				<li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
+			</ul>
+		</div>
+
+	</div>
+</div>`
+});
+
 Vue.component('header-component', {
   template: `<!-- Header
 ================================================== -->
@@ -216,7 +243,32 @@ Vue.component('footer-component', {
 	<!-- Footer
 ================================================== -->
 <div>
-<div id="footer">
+
+
+<!-- Footer / End -->
+	<div id="footer-bottom">
+	<!-- Container -->
+	<div class="container">
+
+		<div class="eight columns">&copy 2017 Всички права запазени <a href="lenovoshop.bg">lenovoshop.bg</a></div>
+		<div class="eight columns">
+			<ul class="payment-icons">
+				<li><img src="images/visa.png" alt="" /></li>
+				<li><img src="images/mastercard.png" alt="" /></li>
+				<li><img src="images/skrill.png" alt="" /></li>
+				<li><img src="images/moneybookers.png" alt="" /></li>
+				<li><img src="images/paypal.png" alt="" /></li>
+			</ul>
+		</div>
+
+	</div>
+	<!-- Container / End -->
+
+</div>
+</div>
+`});
+
+var footer=`<div id="footer">
 
 	<!-- Container -->
 	<div class="container">
@@ -275,30 +327,8 @@ Vue.component('footer-component', {
 	</div>
 	<!-- Container / End -->
 
-</div>
+</div>`
 
-<!-- Footer / End -->
-	<div id="footer-bottom">
-	<!-- Container -->
-	<div class="container">
-
-		<div class="eight columns">&copy 2017 Всички права запазени <a href="lenovoshop.bg">lenovoshop.bg</a></div>
-		<div class="eight columns">
-			<ul class="payment-icons">
-				<li><img src="images/visa.png" alt="" /></li>
-				<li><img src="images/mastercard.png" alt="" /></li>
-				<li><img src="images/skrill.png" alt="" /></li>
-				<li><img src="images/moneybookers.png" alt="" /></li>
-				<li><img src="images/paypal.png" alt="" /></li>
-			</ul>
-		</div>
-
-	</div>
-	<!-- Container / End -->
-
-</div>
-</div>
-`});
 new Vue({
   el: '#wrapper'
 });
