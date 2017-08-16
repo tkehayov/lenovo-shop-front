@@ -33,24 +33,12 @@ Vue.component('header-component', {
 	<!-- Logo -->
 	<div class="four columns">
 		<div id="logo">
-			<h1><a href="index.html"><img src="images/logo.png" alt="Trizzy" /></a></h1>
+			<h1><a href="index.html"><img src="images/lenovo-shop.png" alt="Lenovo Shop"/></a></h1>
 		</div>
 	</div>
-	<!-- Additional Menu -->
-	<div class="twelve columns">
-		<div id="additional-menu">
-			<ul>
-				<li><a href="shopping-cart.html">Shopping Cart</a></li>
-				<li><a href="wishlist.html">WishList <span>(2)</span></a></li>
-				<li><a href="checkout-billing-details.html">Checkout</a></li>
-				<li><a href="my-account.html">My Account</a></li>
-			</ul>
-		</div>
-	</div>
-
 
 	<!-- Shopping Cart -->
-	<div class="twelve columns">
+	<div class="twelve columns" id="additional-menu">
 
 		<div id="cart">
 
@@ -240,94 +228,19 @@ Vue.component('header-component', {
 
 Vue.component('footer-component', {
 	template: `
-	<!-- Footer
-================================================== -->
+<!-- Footer
+   ================================================== -->
 <div>
-
-
-<!-- Footer / End -->
-	<div id="footer-bottom">
-	<!-- Container -->
-	<div class="container">
-
-		<div class="eight columns">&copy 2017 Всички права запазени <a href="lenovoshop.bg">lenovoshop.bg</a></div>
-		<div class="eight columns">
-			<ul class="payment-icons">
-				<li><img src="images/visa.png" alt="" /></li>
-				<li><img src="images/mastercard.png" alt="" /></li>
-				<li><img src="images/skrill.png" alt="" /></li>
-				<li><img src="images/moneybookers.png" alt="" /></li>
-				<li><img src="images/paypal.png" alt="" /></li>
-			</ul>
-		</div>
-
-	</div>
-	<!-- Container / End -->
-
-</div>
+   <!-- Footer / End -->
+   <div id="footer-bottom">
+      <!-- Container -->
+      <div class="container">
+         <div class="eight columns">&copy 2017 Всички права запазени <a href="lenovoshop.bg"> Трейдико ЕООД</a></div>
+      </div>
+      <!-- Container / End -->
+   </div>
 </div>
 `});
-
-var footer=`<div id="footer">
-
-	<!-- Container -->
-	<div class="container">
-
-		<div class="four columns">
-			<img src="images/logo-footer.png" alt="" class="margin-top-10"/>
-			<p class="margin-top-15">Nulla facilisis feugiat magna, ut molestie metus hendrerit vitae. Vivamus tristique lectus at varius rutrum. Integer lobortis mauris non consectetur eleifend.</p>
-		</div>
-
-		<div class="four columns">
-
-			<!-- Headline -->
-			<h3 class="headline footer">Customer Service</h3>
-			<span class="line"></span>
-			<div class="clearfix"></div>
-
-			<ul class="footer-links">
-				<li><a href="#">Order Status</a></li>
-				<li><a href="#">Payment Methods</a></li>
-				<li><a href="#">Delivery & Returns</a></li>
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Terms & Conditions</a></li>
-			</ul>
-
-		</div>
-
-		<div class="four columns">
-
-			<!-- Headline -->
-			<h3 class="headline footer">My Account</h3>
-			<span class="line"></span>
-			<div class="clearfix"></div>
-
-			<ul class="footer-links">
-				<li><a href="#">My Account</a></li>
-				<li><a href="#">Order History</a></li>
-				<li><a href="#">Wish List</a></li>
-			</ul>
-
-		</div>
-
-		<div class="four columns">
-
-			<!-- Headline -->
-			<h3 class="headline footer">Newsletter</h3>
-			<span class="line"></span>
-			<div class="clearfix"></div>
-			<p>Sign up to receive email updates on new product announcements, gift ideas, special promotions, sales and more.</p>
-
-			<form action="#" method="get">
-				<button class="newsletter-btn" type="submit">Join</button>
-				<input class="newsletter" type="text" placeholder="mail@example.com" value=""/>
-			</form>
-		</div>
-
-	</div>
-	<!-- Container / End -->
-
-</div>`
 
 new Vue({
   el: '#wrapper'

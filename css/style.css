@@ -831,28 +831,8 @@ span.skill-title i {
 #additional-menu {
 	display: block;
 	float: right;
-	margin: 18px 0 20px 0;
+	margin: 30px 10px 0px 0;
 }
-
-#additional-menu ul li {
-	display: inline;
-	padding: 0 11px;
-	float: left;
-}
-
-#additional-menu ul li:first-child { background: none; }
-#additional-menu ul li:last-child { padding-right: 0; }
-
-#additional-menu ul li a {
-	font-size: 13px;
-	color: #999;
-}
-
-#additional-menu ul li a span { color: #bbb; }
-
-#additional-menu ul li a:hover,
-#additional-menu ul li a:hover span { color: #808080; }
-
 
 /* Search
 ------------------------------------- */
@@ -2142,7 +2122,7 @@ a.button.color:hover { background-color: #c0c0c0; }
 	background-color: #f4f4f4;
 	position: relative;
 	margin: 0 0 50px 0;
-	padding: 50px 0;
+	padding: 10px 0;
 }
 
 .titlebar h2 {
