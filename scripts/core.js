@@ -200,31 +200,10 @@ Vue.component('header-component', {
 						</div>
 					</div>
 				</li>	
-				<li class="dropdown">
-					<a href="#">Portfolio</a>
-					<ul>
-						<li><a href="portfolio-3-columns.html">3 Columns</a></li>
-						<li><a href="portfolio-4-columns.html">4 Columns</a></li>
-						<li><a href="portfolio-dynamic-grid.html">Dynamic Grid</a></li>
-						<li><a href="single-project.html">Single Project</a></li>
-					</ul>
-				</li>
-				
-
-				<li class="dropdown">
-					<a href="#">Blog</a>
-					<ul>
-						<li><a href="blog-standard.html">Blog Standard</a></li>
-						<li><a href="blog-masonry.html">Blog Masonry</a></li>
-						<li><a href="blog-single-post.html">Single Post</a></li>
-					</ul>
-				</li>
-
 
 				<li class="demo-button">
-				  <a href="#">Get This Theme</a>
+				  <a href="/contacts">Контакти</a>
 				</li>
-
 			</ul>
 		</nav>
 	</div>
