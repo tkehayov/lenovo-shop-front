@@ -52,7 +52,7 @@ Vue.component('header-component', {
 			<div class="arrow"></div>
 
 				<div class="cart-amount">
-					<span>2 items in the shopping cart</span>
+					<span>2 продукт(а) в количката</span>
 				</div>
 
 					<ul>
@@ -72,8 +72,8 @@ Vue.component('header-component', {
 					</ul>
 
 				<div class="cart-buttons button">
-					<a href="shopping-cart.html" class="view-cart" ><span data-hover="View Cart"><span>View Cart</span></span></a>
-					<a href="checkout-billing-details.html" class="checkout"><span data-hover="Checkout">Checkout</span></a>
+					<a href="shopping-cart.html" class="view-cart" ><span data-hover="Преглед на количката"><span>Преглед на количката</span></span></a>
+					<a href="checkout-billing-details.html" class="checkout"><span data-hover="Поръчай">Поръчай</span></a>
 				</div>
 				<div class="clearfix">
 
