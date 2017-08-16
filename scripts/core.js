@@ -103,6 +103,52 @@ Vue.component('header-component', {
 
 				<li><a href="index.html" class="current homepage" id="current">Home</a></li>
 
+				<li>
+					<a href="#">Лаптопи</a>
+					<div class="mega">
+						<div class="mega-container">
+							<div class="one-column">
+								<ul>
+									<li><span class="mega-headline">ThinkPad</span></li>
+									<li><a href="/categories/x1-thinkpad">X серия</a></li>
+									<li><a href="/categories/w-thinkpad">W серия</a></li>
+									<li><a href="/categories/p-thinkpad">P серия</a></li>
+									<li><a href="/categories/t-thinkpad">T серия</a></li>
+									<li><a href="faq.html">TODO ADD MORE LAPTOPS</a></li>
+								</ul>
+							</div>
+
+							<div class="one-column">
+								<ul><li><span class="mega-headline">Lenovo</span></li>
+									<li><a href="/categories/y-lenovo">Серия Y</a></li>
+									<li><a href="/categories/ideapad-lenovo">IdeaPad 700</a></li>
+									<li><a href="/categories/yoga-lenovo">Yoga серия</a></li>
+									<li><a href="/categories/V-lenovo">V серия</a></li>
+									<li><a href="faq.html">TODO ADD MORE LAPTOPS</a></li>
+								</ul>
+							</div>
+							<div class="one-column">
+								<ul><li><span class="mega-headline">IdeaPad</span></li>
+									<li><a href="/categories/y-lenovo">Серия Y</a></li>
+									<li><a href="/categories/ideapad-lenovo">IdeaPad 700</a></li>
+									<li><a href="/categories/yoga-lenovo">Yoga серия</a></li>
+									<li><a href="/categories/V-lenovo">V серия</a></li>
+									<li><a href="faq.html">TODO ADD MORE LAPTOPS</a></li>
+								</ul>
+							</div>
+							<div class="one-column">
+								<ul><li><span class="mega-headline">Yoga</span></li>
+									<li><a href="/categories/y-lenovo">Серия Y</a></li>
+									<li><a href="/categories/ideapad-lenovo">IdeaPad 700</a></li>
+									<li><a href="/categories/yoga-lenovo">Yoga серия</a></li>
+									<li><a href="/categories/V-lenovo">V серия</a></li>
+									<li><a href="faq.html">TODO ADD MORE LAPTOPS</a></li>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</li>
 				<li class="dropdown">
 					<a href="#">Shop</a>
 					<ul>
@@ -113,75 +159,9 @@ Vue.component('header-component', {
 						<li><a href="shop-categories-grid.html">Categories Grid</a></li>
 						<li><a href="single-product-page.html">Single Product Page</a></li>
 						<li><a href="variable-product-page.html">Variable Product Page</a></li>
-						<li><a href="wishlist.html">Wishlist Page</a></li>
 						<li><a href="shopping-cart.html">Shopping Cart</a></li>
 					</ul>
 				</li>
-
-
-				<li>
-					<a href="#">Features</a>
-					<div class="mega">
-						<div class="mega-container">
-
-							<div class="one-column">
-								<ul>
-									<li><span class="mega-headline">Example Pages</span></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a href="faq.html">FAQ</a></li>
-									<li><a href="404-page.html">404 Page</a></li>
-								</ul>
-							</div>
-
-							<div class="one-column">
-								<ul>
-									<li><span class="mega-headline">Featured Pages</span></li>
-									<li><a href="index-2.html">Business Homepage</a></li>
-									<li><a href="shop-with-sidebar.html">Default Shop</a></li>
-									<li><a href="blog-masonry.html">Masonry Blog</a></li>
-									<li><a href="variable-product-page.html">Variable Product</a></li>
-									<li><a href="portfolio-dynamic-grid.html">Dynamic Grid</a></li>
-								</ul>
-							</div>
-
-							<div class="one-column hidden-on-mobile">
-								<ul>
-									<li><span class="mega-headline">Paragraph</span></li>
-									<li><p>This <a href="#">Mega Menu</a> can handle everything. Lists, paragraphs, forms...</p></li>
-								</ul>
-							</div>
-
-							<div class="one-fourth-column hidden-on-mobile">
-								<a href="#" class="img-caption margin-reset">
-									<figure>
-										<img src="images/menu-banner-01.jpg" alt="" />
-										<figcaption>
-											<h3>Jeans</h3>
-											<span>Pack for Style</span>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-
-							<div class="one-fourth-column hidden-on-mobile">
-								<a href="#" class="img-caption margin-reset">
-									<figure>
-										<img src="images/menu-banner-02.jpg" alt="" />
-										<figcaption>
-											<h3>Sunglasses</h3>
-											<span>Nail the Basics</span>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</li>
-
 
 				<li class="dropdown">
 					<a href="#">Shortcodes</a>
