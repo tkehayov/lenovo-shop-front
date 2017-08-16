@@ -174,17 +174,32 @@ Vue.component('header-component', {
 					</div>
 				</li>
 
-				<li class="dropdown">
-					<a href="#">Shortcodes</a>
-					<ul>
-						<li><a href="elements.html">Elements</a></li>
-						<li><a href="typography.html">Typography</a></li>
-						<li><a href="pricing-tables.html">Pricing Tables</a></li>
-						<li><a href="icons.html">Icons</a></li>
-					</ul>
-				</li>
+				<li>
+					<a href="#">Смартфони и устройства</a>
+					<div class="mega">
+						<div class="mega-container">
+							<div class="one-column">
+								<ul>
+									<li><span class="mega-headline">Lenovo</span></li>
+									<li><a href="/categories/x1-thinkpad">Vibe</a></li>
+									<li><a href="/categories/w-thinkpad">Hhab</a></li>
+									<li><a href="/categories/w-thinkpad">P серия</a></li>
+									<li><a href="/categories/w-thinkpad">К серия</a></li>
+									<li><a href="/categories/w-thinkpad">C серия</a></li>
+									<li><a href="/categories/w-thinkpad">A серия</a></li>
+								</ul>
+							</div>
 
-
+							<div class="one-column">
+								<ul><li><span class="mega-headline">Moto</span></li>
+									<li><a href="/categories/y-lenovo">Moto</a></li>
+									<li><a href="/categories/ideapad-lenovo">Moto Mods</a></li>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</li>	
 				<li class="dropdown">
 					<a href="#">Portfolio</a>
 					<ul>
