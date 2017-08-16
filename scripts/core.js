@@ -89,7 +89,6 @@ Vue.component('header-component', {
 				<input class="search-field" type="text" placeholder="Search" value=""/>
 			</form>
 		</nav>
-
 	</div>
 </div>
 
@@ -149,18 +148,30 @@ Vue.component('header-component', {
 						</div>
 					</div>
 				</li>
-				<li class="dropdown">
-					<a href="#">Shop</a>
-					<ul>
-						<li><a href="shop-with-sidebar.html">Shop With Sidebar</a></li>
-						<li><a href="shop-with-adv-search.html">Shop With Adv. Search</a></li>
-						<li><a href="shop-full-width.html">Shop Full Width</a></li>
-						<li><a href="checkout-billing-details.html">Checkout Pages</a></li>
-						<li><a href="shop-categories-grid.html">Categories Grid</a></li>
-						<li><a href="single-product-page.html">Single Product Page</a></li>
-						<li><a href="variable-product-page.html">Variable Product Page</a></li>
-						<li><a href="shopping-cart.html">Shopping Cart</a></li>
-					</ul>
+				<li>
+					<a href="#">Таблети</a>
+					<div class="mega">
+						<div class="mega-container">
+							<div class="one-column">
+								<ul>
+									<li><span class="mega-headline">ThinkPad</span></li>
+									<li><a href="/categories/x1-thinkpad">X1 Thinkpad</a></li>
+									<li><a href="/categories/w-thinkpad">Helix ThinkPad</a></li>
+								</ul>
+							</div>
+
+							<div class="one-column">
+								<ul><li><span class="mega-headline">Lenovo</span></li>
+									<li><a href="/categories/y-lenovo">Yoga</a></li>
+									<li><a href="/categories/ideapad-lenovo">IdeaPad Miix</a></li>
+									<li><a href="/categories/yoga-lenovo">Lenovo A Серия</a></li>
+									<li><a href="/categories/V-lenovo">V серия</a></li>
+									<li><a href="faq.html">TODO ADD MORE LAPTOPS</a></li>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
 				</li>
 
 				<li class="dropdown">
