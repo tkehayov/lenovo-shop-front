@@ -202,7 +202,7 @@ Vue.component('header-component', {
 				</li>	
 
 				<li class="demo-button">
-				  <a href="/contacts">Контакти</a>
+				  <a href="contact.html">Контакти</a>
 				</li>
 			</ul>
 		</nav>
