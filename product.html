@@ -26,16 +26,16 @@
 <body class="boxed">
 <div id="wrapper">
 
+<div id="header-component">
+	<!-- Top Bar
+	================================================== -->
+	<header-top></header-top>
+	<div class="clearfix"></div>
 
-<!-- Top Bar
-================================================== -->
-<header-top></header-top>
-<div class="clearfix"></div>
-
-<div id="example">
-	<header-component></header-component>
+	<div id="example">
+		<header-component></header-component>
+	</div>
 </div>
-
 <!-- Titlebar
 ================================================== -->
 <section class="titlebar">
@@ -104,7 +104,7 @@
 			</section>
 
 			<section class="linking">
-					<a href="#" class="button adc">Добави</a>
+					<a href="#" class="button adc" @click="adda">Добави</a>
 					<div class="clearfix"></div>
 			</section>
 
@@ -124,7 +124,6 @@
 			<!-- Tabs Content -->
 			<div class="tabs-container">
 				<div>
-
 					<table class="basic-table">
 						<tr>
 							<th>Size</th>
@@ -152,14 +151,13 @@
 </div>
 
 <div class="margin-top-50"></div>
-
-<footer-component></footer-component>
-
+<div id="footer-component">
+	<footer-component></footer-component>
+</div>
 <!-- Back To Top Button -->
 <div id="backtotop"><a href="#"></a></div>
 
 </div>
-
 
 <!-- Java Script
 ================================================== -->
@@ -169,6 +167,8 @@
 <script src="scripts/jquery.jpanelmenu.js"></script>
 <!-- Dev Purposes -->
 <script src="scripts/vue.js"></script>
+
+<!-- <script src="./product.js"></script> -->
 <script src="scripts/core.js"></script>
 
 

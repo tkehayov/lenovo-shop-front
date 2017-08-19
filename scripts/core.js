@@ -211,6 +211,10 @@ Vue.component('header-component', {
 </div>`
 });
 
+new Vue({
+  el: '#header-component'
+});
+
 Vue.component('footer-component', {
 	template: `
 <!-- Footer
@@ -228,5 +232,5 @@ Vue.component('footer-component', {
 `});
 
 new Vue({
-  el: '#wrapper'
+  el: '#footer-component'
 });
