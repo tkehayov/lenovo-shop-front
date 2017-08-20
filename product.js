@@ -1,15 +1,23 @@
 // Vue.http.options.emulateJSON = true; // send as 
-
 new Vue({
-    el: '#productpopo',
+    el: '#shopping-cart',
     data: {
-        debug: true,
-        domain: 'sss',
-        ajaxRequest: false,
-        postResults: []
+        ID: "123",
+        ProductName: "product",
+        Quantity: 1
     },
     methods: {
-      checkWebsite: function() {
-        console.log("Asdf");
-      }}
+      addCart: function() {
+        id = new URLSearchParams(window.location.search).get("id");
+        this.$http.post('/cart',{
+            ID: id,
+            ProductName: "product",
+            Quantity: 1
+        }).then(function(data) {
+
+            console.log("success");
+        }, function() {
+            console.log('failed');
+        });
+    }}
 });
