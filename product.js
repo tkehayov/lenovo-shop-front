@@ -4,11 +4,10 @@ new Vue({
       addCart: function() {
         id = new URLSearchParams(window.location.search).get("id");
         this.$http.post('/cart',{
-            id: id,
+            id: parseInt(id),
             quantity: 1
         }).then(function(data) {
-
-            console.log("success");
+            console.log(data);
         }, function() {
             console.log('failed');
         });

@@ -26,6 +26,21 @@ Vue.component('header-top',{
 });
 
 Vue.component('header-component', {
+  data: function() {
+            return {
+                carts: null,
+            }
+        },
+  methods: {
+  loadUsers: function(){
+  		 this.$http.get('/cart').then(function(response){
+           this.carts = response.body;
+      });
+  }
+},
+beforeMount(){
+    	this.loadUsers()
+    },
   template: `<!-- Header
 ================================================== -->
 <div>
@@ -44,7 +59,7 @@ Vue.component('header-component', {
 
 			<!-- Button -->
 			<div class="cart-btn">
-				<a href="#" class="button adc">$178.00</a>
+				<a href="hello.bg" class="button adc">{{carts.overallPrice}}</a>
 			</div>
 
 			<div class="cart-list">
@@ -234,3 +249,4 @@ Vue.component('footer-component', {
 new Vue({
   el: '#footer-component'
 });
+
