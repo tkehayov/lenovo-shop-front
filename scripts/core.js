@@ -33,8 +33,10 @@ Vue.component('header-component', {
         },
   methods: {
   loadUsers: function(){
-  		 this.$http.get('/cart').then(function(response){
+  		 this.$http.get('/cart').then(response=>{
            this.carts = response.body;
+           this.carts.overallPrice = Number((this.carts.overallPrice).toFixed(2));
+           return this.carts;
       });
   }
 },
