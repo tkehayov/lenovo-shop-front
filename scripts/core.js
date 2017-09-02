@@ -26,22 +26,25 @@ Vue.component('header-top',{
 });
 
 Vue.component('header-component', {
+
   data: function() {
             return {
                 carts: null,
             }
         },
   methods: {
-  loadUsers: function(){
+  	loadUsers: function(){
   		 this.$http.get('/cart').then(response=>{
            this.carts = response.body;
+
            this.carts.overallPrice = Number((this.carts.overallPrice).toFixed(2));
+           console.log(this.carts.shoppingCarts);
            return this.carts;
       });
   }
 },
-beforeMount(){
-    	this.loadUsers()
+mounted: function () {
+        this.loadUsers();
     },
   template: `<!-- Header
 ================================================== -->
@@ -61,7 +64,9 @@ beforeMount(){
 
 			<!-- Button -->
 			<div class="cart-btn">
-				<a href="hello.bg" class="button adc">{{carts.overallPrice}}</a>
+				<div v-if="carts">
+					<a href="hello.bg" class="button adc">{{carts.overallPrice}}</a>
+				</div>
 			</div>
 
 			<div class="cart-list">
@@ -71,23 +76,18 @@ beforeMount(){
 				<div class="cart-amount">
 					<span>2 продукт(а) в количката</span>
 				</div>
-
+	
 					<ul>
-						<li>
-							<a href="#"><img src="images/small_product_list_08.jpg" alt="" /></a>
-							<a href="#">Converse All Star Trainers</a>
-							<span>1 x $79.00</span>
-							<div class="clearfix"></div>
-						</li>
-
-						<li>
-							<a href="#"><img src="images/small_product_list_09.jpg" alt="" /></a>
-							<a href="#">Tommy Hilfiger <br /> Shirt Beat</a>
-							<span>1 x $99.00</span>
-							<div class="clearfix"></div>
-						</li>
+						<div v-if="carts">
+							<li v-for="shoppingCart in carts.shoppingCarts">
+								<a href="#"><img src="images/small_product_list_08.jpg" alt="" /></a>
+								<a href="#">{{shoppingCart.name}}</a>
+								<span>{{shoppingCart.quantity}} x {{shoppingCart.price}}</span>
+								<div class="clearfix"></div>
+							</li>
+						</div>
 					</ul>
-
+					
 				<div class="cart-buttons button">
 					<a href="shopping-cart.html" class="view-cart" ><span data-hover="Преглед на количката"><span>Преглед на количката</span></span></a>
 					<a href="checkout-billing-details.html" class="checkout"><span data-hover="Поръчай">Поръчай</span></a>
