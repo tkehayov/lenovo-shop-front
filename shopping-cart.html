@@ -53,6 +53,7 @@
 </div>
 </section>
 
+<div id="shopping-cart">
 
 <div class="container cart">
 
@@ -64,19 +65,17 @@
 			<tr>
 				<th>Артикул</th>
 				<th>Описание</th>
-				<th>Цена</th>
 				<th>Количество</th>
-				<th>Общо</th>
+				<th>Цена</th>
 				<th></th>
 			</tr>
 					
 			<!-- Item #1 -->
-			<tr>
+			<tr v-for="cart in carts.shoppingCarts">
 				<td><img src="images/small_product_list_08.jpg" alt=""/></td>
-				<td class="cart-title"><a href="#">Converse All Star Trainers</a></td>
-				<td>$79.00</td>
-				<td>1</td>
-				<td class="cart-total">$79.00</td>
+				<td class="cart-title"><a href="#">{{cart.name}}</a></td>
+				<td>{{cart.quantity}}</td>
+				<td class="cart-total">{{cart.price}}лв</td>
 				<td><a href="#" class="cart-remove"></a></td>
 			</tr>
 			</table>
@@ -102,17 +101,16 @@
 
 		<table class="cart-table margin-top-5">
 			<tr>
-				<th><strong>178.00 лв</strong></th>
+				<th><strong>{{carts.overallPrice}} лв</strong></th>
 			</tr>
 		</table>
 		<br>
-		<!-- <a href="#" class="calculate-shipping"><i class="fa fa-arrow-circle-down"></i> Calculate Shipping</a> -->
 	</div>
 
 </div>
 
 <div class="margin-top-40"></div>
-
+</div>
 <div id="footer-component">
 	<footer-component></footer-component>
 </div>
@@ -132,7 +130,7 @@
 	<script src="scripts/vue.js"></script>
 	<script src="scripts/vuex.min.js"></script>
 	<script src="scripts/vue-resource.min.js"></script>
-	<!-- <script src="./product.js"></script> -->
+	<script src="./shopping-cart.js"></script>
 	<script src="scripts/core.js"></script>
 
 
