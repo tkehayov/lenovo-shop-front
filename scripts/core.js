@@ -29,22 +29,28 @@ Vue.component('header-component', {
 
   data: function() {
             return {
-                carts: null,
+                carts: {
+                	"shoppingCarts":[],
+                	"overallPrice": 0
+                }
             }
         },
   methods: {
-  	loadUsers: function(){
-  		 this.$http.get('/cart').then(response=>{
-           this.carts = response.body;
 
-           this.carts.overallPrice = Number((this.carts.overallPrice).toFixed(2));
-           console.log(this.carts.shoppingCarts);
+  	getCart: function(){
+  		 this.$http.get('/cart').then(response=>{
+  		 	if(response.body){
+           this.carts = response.body;
+           }
+           if(this.carts.overallPrice!=undefined){	
+           	this.carts.overallPrice = Number((this.carts.overallPrice).toFixed(2));
+           }
            return this.carts;
       });
   }
 },
 mounted: function () {
-        this.loadUsers();
+        this.getCart();
     },
   template: `<!-- Header
 ================================================== -->
@@ -61,9 +67,9 @@ mounted: function () {
 	<div class="twelve columns" id="additional-menu">
 
 		<div id="cart">
-
 			<!-- Button -->
 			<div class="cart-btn">
+
 				<div v-if="carts">
 					<a href="hello.bg" class="button adc">{{carts.overallPrice}}</a>
 				</div>
@@ -74,7 +80,9 @@ mounted: function () {
 			<div class="arrow"></div>
 
 				<div class="cart-amount">
-					<span>2 продукт(а) в количката</span>
+					<div v-if="carts">
+						<span>{{carts.shoppingCarts.length}} продукт(а) в количката</span>
+					</div>
 				</div>
 	
 					<ul>

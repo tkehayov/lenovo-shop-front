@@ -7,7 +7,7 @@ new Vue({
             id: parseInt(id),
             quantity: 1
         }).then(function(data) {
-            console.log(data);
+           location.reload();
         }, function() {
             console.log('failed');
         });
