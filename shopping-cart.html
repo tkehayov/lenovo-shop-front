@@ -76,7 +76,7 @@
 				<td class="cart-title"><a href="#">{{cart.name}}</a></td>
 				<td>{{cart.quantity}}</td>
 				<td class="cart-total">{{cart.price}}лв</td>
-				<td><a href="#" class="cart-remove"></a></td>
+				<td><a href="#" class="cart-remove" @click="removeCart(cart.id)"></a></td>
 			</tr>
 			</table>
 
