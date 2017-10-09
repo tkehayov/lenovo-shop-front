@@ -42,7 +42,7 @@ Vue.component('header-component', {
   		 	if(response.body){
            this.carts = response.body;
            }
-           if(this.carts.overallPrice!=undefined){	
+           if(this.carts.overallPrice!=undefined){
            	this.carts.overallPrice = Number((this.carts.overallPrice).toFixed(2));
            }
            return this.carts;
@@ -84,7 +84,7 @@ mounted: function () {
 						<span>{{carts.shoppingCarts.length}} продукт(а) в количката</span>
 					</div>
 				</div>
-	
+
 					<ul>
 						<div v-if="carts">
 							<li v-for="shoppingCart in carts.shoppingCarts">
@@ -95,7 +95,7 @@ mounted: function () {
 							</li>
 						</div>
 					</ul>
-					
+
 				<div class="cart-buttons button">
 					<a href="shopping-cart.html" class="view-cart" ><span data-hover="Преглед на количката"><span>Преглед на количката</span></span></a>
 					<a href="checkout-billing-details.html" class="checkout"><span data-hover="Поръчай">Поръчай</span></a>
@@ -119,7 +119,7 @@ mounted: function () {
 
 <div class="container">
 	<div class="sixteen columns">
-		
+
 		<a href="#menu" class="menu-trigger"><i class="fa fa-bars"></i> Menu</a>
 
 		<nav id="navigation">
@@ -224,7 +224,7 @@ mounted: function () {
 							<div class="clearfix"></div>
 						</div>
 					</div>
-				</li>	
+				</li>
 
 				<li class="demo-button">
 				  <a href="contact.html">Контакти</a>
@@ -259,4 +259,3 @@ Vue.component('footer-component', {
 new Vue({
   el: '#footer-component'
 });
-

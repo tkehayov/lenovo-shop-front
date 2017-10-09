@@ -43,7 +43,7 @@
 <div class="container">
 	<div class="sixteen columns">
 		<h2>Данни за поръчката</h2>
-		
+
 		<nav id="breadcrumbs">
 			<ul>
 				<li><a href="#">Начало</a></li>
@@ -64,38 +64,36 @@
 <div class="container">
 
 	<div class="eleven columns">
-
 	<!-- Billing Details Content -->
-	<div class="checkout-section active"><span>1</span> Billing Details</div>
+	<div class="checkout-section active"><span>&nbsp;</span>Данни за доставка</div>
 		<div class="checkout-content">
-
-			<div class="half first"><label>Име: <abbr>*</abbr></label><input type="text" placeholder=""  value="" /></div>
-			<div class="half"><label>Фамилия: <abbr>*</abbr></label><input type="text" placeholder=""  value="" /></div>
+			<form class="" action="/order" method="post">
 
 
-			<label>Улица: <abbr>*</abbr></label><input type="text" class="input-text "  value=""  />
+			<div class="half first"><label>Име: <abbr>*</abbr></label><input type="text" name="firstName" placeholder=""  value="" /></div>
+			<div class="half"><label>Фамилия: <abbr>*</abbr></label><input type="text" name="lastName" placeholder=""  value="" /></div>
+
+			<label>Улица: <abbr>*</abbr></label><input type="text" name="address" class="input-text "  value=""  />
 			<span class="shippping-checkbox"><input class="input-checkbox" id="shipping-address"  type="checkbox" name="shipping-address" checked="checked" value="1" />
 			<label for="shipping-address" class="checkbox">Адрес на Еконт</label></span>
 			<div class="clearfix"></div>
 
 
-			<div class="half first"><label>Населено място:  <abbr>*</abbr></label><input type="text" placeholder=""  value="" /></div>
+			<div class="half first"><label>Населено място:  <abbr>*</abbr></label><input name="location" type="text" placeholder=""  value="" /></div>
 
-			<div class="half first"><label>Имейл Адрес: <abbr>*</abbr></label><input type="text" placeholder=""  value="" /></div>
+			<div class="half first"><label>Имейл Адрес: <abbr>*</abbr></label><input type="text" name="email" placeholder=""  value="" /></div>
 			<div class="half"><label>Телефон: <abbr>*</abbr></label><input type="text" placeholder=""  value="" /></div>
 
 
 			<div class="clearfix"></div>
 
+			<input type="submit" name="" value="Поръчай">
+			<!-- <a href="checkout-delivery.html" class="continue button color">Поръчай</a> -->
 
+			</form>
 			</div>
 			<div class="clearfix"></div>
 
-			<a href="checkout-delivery.html" class="continue button color">Continue</a>
-
-
-			<a href="checkout-delivery.html"><div class="checkout-section"><span>2</span> Delivery</div></a>
-			<a href="checkout-payment-order-review.html"><div class="checkout-section"><span>3</span> Payment & Order Review</div></a>
 		</div>
 		<!-- Billing Details / Enc -->
 

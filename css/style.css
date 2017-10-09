@@ -1157,6 +1157,7 @@ a:hover .checkout-section span {
 	text-align: center;
 	padding: 10px 0;
 	margin: 0 0 30px 0;
+	background-color: #3acf87 !important;
 }
 
 /* Forms */
@@ -1215,7 +1216,7 @@ a:hover .checkout-section strong {color: #fff;}
 
 /* Checkbox */
 input.input-checkbox {
-	width:20px; 
+	width:20px;
 	float: left;
 	position: relative;
 	width: auto !important;
@@ -1250,7 +1251,7 @@ label.checkbox {
      background-image: none;
      padding-right: 20px;
   }
-} 
+}
 
 
 /* Address Review & Delivery List */
@@ -1371,7 +1372,7 @@ ul.delivery-options {
 	margin: 0 4px 0 0;
 	border: 1px solid #e0e0e0;
 	padding: 3px;
-	cursor: pointer; 
+	cursor: pointer;
 	}
 
 .credit-card-fields span {
@@ -1588,7 +1589,7 @@ ul.delivery-options {
 .mega-container .four-columns 			{ width: 740px; }
 .mega-container .five-columns 			{ width: 929px; }
 .mega-container .six-columns 			{ width: 1118px; }
-	
+
 
 /* Smaller than standard 1180 (devices and browsers) */
 @media only screen and (min-width: 960px) and (max-width: 1289px) {
@@ -1626,7 +1627,7 @@ ul.delivery-options {
 	.mega-container .three-columns 			{ width: 335px; }
 	.mega-container .four-columns 			{ width: 452px; }
 	.mega-container .five-columns 			{ width: 569px; }
-	.mega-container .six-columns 			{ width: 686px; } 
+	.mega-container .six-columns 			{ width: 686px; }
 }
 
 
@@ -2314,7 +2315,7 @@ a.button.color:hover { background-color: #c0c0c0; }
 .pagination-next-prev a.next { float: right; }
 .pagination-next-prev a.prev { float: left; }
 
-.pagination-next-prev ul li a { 
+.pagination-next-prev ul li a {
 	width: 36px;
 	height: 36px;
 	padding:0;
@@ -3416,7 +3417,7 @@ blockquote {
 .plan.color-5 .plan-price,
 .plan.color-5 a.button { background-color: #a558a6; }
 
- 
+
 .plan-price .value {
 	font-weight: 600;
 	letter-spacing: -1px;
@@ -3594,7 +3595,7 @@ blockquote {
 	background: rgba(0, 0, 0, 0.7);
 	display: block;
 }
-	
+
 .caption.description h3 {
 	color: #fff;
 	font-size: 16px;
@@ -3606,7 +3607,7 @@ blockquote {
 	display: block;
 	letter-spacing: 0;
 }
-	
+
 .caption.description p {
 	margin: 0;
 	line-height: 22px;
@@ -3926,8 +3927,8 @@ a.caption-btn:hover {
 .mfp-s-error .mfp-content {
 	display: none;
 }
-  
-.mfp-s-loading .mfp-arrow { 
+
+.mfp-s-loading .mfp-arrow {
 	display: none;
 }
 
@@ -4085,43 +4086,43 @@ button.mfp-arrow {
 
 .my-mfp-zoom-in .zoom-anim-dialog {
 	opacity: 0;
-	-webkit-transition: all 0.2s ease-in-out; 
-	-moz-transition: all 0.2s ease-in-out; 
-	-o-transition: all 0.2s ease-in-out; 
-	transition: all 0.2s ease-in-out; 
-	-webkit-transform: scale(0.8); 
-	-moz-transform: scale(0.8); 
-	-ms-transform: scale(0.8); 
-	-o-transform: scale(0.8); 
-	transform: scale(0.8); 
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
 }
 
 /* animate in */
 .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
 	opacity: 1;
-	-webkit-transform: scale(1); 
-	-moz-transform: scale(1); 
-	-ms-transform: scale(1); 
-	-o-transform: scale(1); 
-	transform: scale(1); 
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
 }
 
 /* animate out */
 .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
-	-webkit-transform: scale(0.8); 
-	-moz-transform: scale(0.8); 
-	-ms-transform: scale(0.8); 
-	-o-transform: scale(0.8); 
-	transform: scale(0.8); 
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
 	opacity: 0;
 }
 
 /* Dark overlay, start state */
 .my-mfp-zoom-in.mfp-bg {
 	opacity: 0.001; /* Chrome opacity transition bug */
-	-webkit-transition: opacity 0.3s ease-out; 
-	-moz-transition: opacity 0.3s ease-out; 
-	-o-transition: opacity 0.3s ease-out; 
+	-webkit-transition: opacity 0.3s ease-out;
+	-moz-transition: opacity 0.3s ease-out;
+	-o-transition: opacity 0.3s ease-out;
 	transition: opacity 0.3s ease-out;
 }
 /* animate in */
@@ -4256,7 +4257,7 @@ img.mfp-img {
 	margin-left: 5px;
    }
 }
-	
+
 @media all and (max-width: 800px) { .mfp-arrow {width: 70px;} }
 
 .mfp-ie7 .mfp-img {
@@ -7216,7 +7217,7 @@ html[xmlns] .slides {display: block;}
 	.extra-padding { padding-right: 10px; }
 	.extra-padding.left { padding-left: 10px; }
 	#not-found {margin: 35px 0 60px 0;}
-	
+
 	#not-found h2 {
 		font-size: 160px;
 		line-height: 160px;
@@ -7290,7 +7291,7 @@ html[xmlns] .slides {display: block;}
 	}
 
 	#not-found {margin: 15px 0 25px 0;}
-	
+
 	#not-found h2 {
 		font-size: 110px;
 		line-height: 120px;
@@ -7480,7 +7481,7 @@ only screen and (min-device-pixel-ratio: 2) {
 		margin: 5px 0 -5px 1px;
 		font-weight: 600;
 	}
-	
+
 	#style-switcher {
 		background: #606060;
 		width:205px;
@@ -7489,11 +7490,11 @@ only screen and (min-device-pixel-ratio: 2) {
 		z-index:9999;
 		left: -205px;
 	}
-	
+
 	#style-switcher div {
 		padding: 2px 18px 10px 18px;
 	}
-	
+
 	#style-switcher h2 {
 		background-color: #505050;
 		color: #fff;
@@ -7501,7 +7502,7 @@ only screen and (min-device-pixel-ratio: 2) {
 		font-size: 14px;
 		padding: 7px 0 6px 20px;
 	}
-	
+
 	#style-switcher h2 a {
 		background: url("../images/switcher.png") no-repeat 9px center transparent;
 		background-color: #505050;
@@ -7513,25 +7514,25 @@ only screen and (min-device-pixel-ratio: 2) {
 		top: 0;
 		width: 43px;
 	}
-	
+
 	.colors {
 		list-style:none;
 		margin: 0 0px 10px 0;
 		overflow: hidden;
 	}
-	
+
 	.colors li {
 		float:left;
 		margin: 4px 2px 0 2px;
 	}
-	
+
 	.colors li a {
 		display: block;
 		width: 17px;
 		height: 17px;
 		cursor: pointer;
-	} 
-	
+	}
+
 	div.layout-style {
 		padding:0 !important;
 	}
@@ -7543,7 +7544,7 @@ only screen and (min-device-pixel-ratio: 2) {
 		font-size: 13px;
 		margin: 2px 0 10px 2px;
 	}
-	
+
 	.green, .green-bg { background: #3acf87; }
 	.blue, .blue-bg { background: #2db2ea; }
 	.orange, .orange-bg {background: #fa5b0f; }
@@ -7585,7 +7586,7 @@ only screen and (min-device-pixel-ratio: 2) {
 	#reset a.button {
 		padding: 7px 14px;
 		font-weight: 700;
-		font-size: 13px; 
+		font-size: 13px;
 	}
-	
+
 	@media only screen and (max-width: 1024px) {#style-switcher {display: none;}}
