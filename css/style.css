@@ -7544,6 +7544,14 @@ only screen and (min-device-pixel-ratio: 2) {
 		font-size: 13px;
 		margin: 2px 0 10px 2px;
 	}
+	.white-popup {
+	  position: relative;
+	  background: #FFF;
+	  padding: 50px;
+	  width:auto;
+	  max-width: 600px;
+	  margin: 20px auto;
+	}
 
 	.green, .green-bg { background: #3acf87; }
 	.blue, .blue-bg { background: #2db2ea; }
