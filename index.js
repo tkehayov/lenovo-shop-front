@@ -11,6 +11,7 @@ new Vue({
 });
 (function($) {
     $(window).load(function () {
+      if(message!=null){
       $.magnificPopup.open({
         items: {
             src: '<div class="white-popup">'+message+'<br> </div>',
@@ -18,5 +19,6 @@ new Vue({
         },
         midClick: true
       }, 0);
+      }
     });
 })(jQuery);
