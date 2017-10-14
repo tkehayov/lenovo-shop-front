@@ -5041,13 +5041,14 @@ ul.footer-links { margin: 0 0 15px 0; }
 
 /* Categories
 ------------------------------------- */
-#categories {
+.categories {
 	float: left;
 	width: 100%;
 }
 
-#categories li a,
-#categories li a span {
+.categories li a,
+.categories input[type=checkbox],
+.categories li a span {
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -5055,7 +5056,7 @@ ul.footer-links { margin: 0 0 15px 0; }
 	transition: all 0.2s ease-in-out, ;
 }
 
-#categories li a {
+.categories li {
 	display: block;
 	padding: 11px 13px 10px 2px;
 	text-decoration: none;
@@ -5064,58 +5065,59 @@ ul.footer-links { margin: 0 0 15px 0; }
 	margin-top: -1px;
 }
 
-#categories li a:hover,
-#categories li a.active {
+.categories li a:hover,
+.categories input[type=checkbox]:hover,
+.categories li a.active {
 	background-color: #808080;
 	color: #fff;
 	padding-left: 15px;
 }
 
-#categories li li ul {
+.categories li li ul {
 	padding: 0;
 }
 
-#categories li li a.active {
+.categories li li a.active {
 	background-color: transparent;
 	padding-left: 25px;
 	font-weight: 600;
 	color: #808080;
 }
 
-#categories li li ul {
+.categories li li ul {
 	padding-left: 15px;
 }
 
-#categories li li a.active span {
+.categories li li a.active span {
 	color: #808080;
 }
 
-#categories li a span {
+.categories li a span {
 	color: #aaa;
 }
 
-#categories li a:hover span,
-#categories li a.active span {
+.categories li a:hover span,
+.categories li a.active span {
 	color: #fff;
 }
 
-#categories li ul {
+.categories li ul {
 	display: none;
 	background-color: #f8f8f8;
 	padding: 15px 0;
 }
 
 
-#categories li ul li a,
-#categories li ul li a:hover  {
+.categories li ul li a,
+.categories li ul li a:hover  {
 	padding: 3px 25px 4px 25px;
 	border: none;
 	color: #777;
 	background-color: #f8f8f8;
 }
 
-#categories li ul li a:hover span,
-#categories li ul li a:hover  {
+.categories li ul li a:hover span,
+.categories li ul li a:hover  {
 	color: #808080;
 }
 
@@ -7127,7 +7129,7 @@ html[xmlns] .slides {display: block;}
 .categories li:before {
 	font-family: "FontAwesome";
 	font-size: 12px;
-	content: "";
+	
 	color: #ddd;
 	position: relative;
 	left: 0;
