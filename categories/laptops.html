@@ -64,38 +64,34 @@
 	<div class="four columns">
 
 		<!-- Categories -->
-		<div class="widget margin-top-0">
-			<h3 class="headline">Размер на екрана</h3><span class="line"></span><div class="clearfix"></div>
+		<div id="filter">
 
-			<ul class="categories">
-				<li><label><input type="checkbox" name="screen-size" value="12.0">12.0"</label></li>
-        <li><label><input type="checkbox" name="screen-size" value="14.0">14.0"</label></li>
-        <li><label><input type="checkbox" name="screen-size" value="14.0">16.0"</label></li>
-			</ul>
+			<div class="widget margin-top-0">
+				<h3 class="headline">Размер на екрана</h3><span class="line"></span><div class="clearfix"></div>
 
-      <!-- <form action="/action_page.php">
-        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-        <input type="submit" value="Submit">
-      </form> -->
-			<div class="clearfix"></div>
+				<ul class="categories">
+					<span>Checked names: {{ screenSize.checkedNames }}</span>
+					<li><label><input type="checkbox" name="screen-size" value="12.0" v-model="screenSize.checkedNames">12.0"</label></li>
+	        <li><label><input type="checkbox" name="screen-size" value="14.0" v-model="screenSize.checkedNames">14.0"</label></li>
+	        <li><label><input type="checkbox" name="screen-size" value="16.0" v-model="screenSize.checkedNames">16.0"</label></li>
+				</ul>
+				<div class="clearfix"></div>
 
-		</div>
-
-
-	 	<!-- Widget -->
-	 	<div class="widget">
-	 		<h3 class="headline">Filter By Price</h3><span class="line"></span><div class="clearfix"></div>
-
-			<div id="price-range">
-				<div class="padding-range"><div id="slider-range"></div></div>
-				<label for="amount">Price:</label>
-				<input type="text" id="amount"/>
-				<a href="#" class="button color">Filter</a>
 			</div>
-			<div class="clearfix"></div>
-	 	</div>
 
+		 	<!-- Widget -->
+		 	<div class="widget">
+		 		<h3 class="headline">Цена</h3><span class="line"></span><div class="clearfix"></div>
+
+				<div id="price-range">
+					<div class="padding-range"><div id="slider-range"></div></div>
+					<label for="amount">Price:</label>
+					<input type="text" id="amount"/>
+					<a href="#" class="button color">филтър</a>
+				</div>
+				<div class="clearfix"></div>
+		 	</div>
+	</div>
 	</div>
 
 
@@ -233,8 +229,9 @@
 <script src="../scripts/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/2.0.0/vuex.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.4/vue-resource.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.min.js"></script>
 <script src="../scripts/core.js"></script>
-<script src="../index.js"></script>
+<script src="./laptops.js"></script>
 
 <script src="../scripts/jquery.themepunch.plugins.min.js"></script>
 <script src="../scripts/jquery.themepunch.revolution.min.js"></script>
