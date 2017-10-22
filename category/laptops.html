@@ -70,7 +70,6 @@
 				<h3 class="headline">Размер на екрана</h3><span class="line"></span><div class="clearfix"></div>
 
 				<ul class="categories">
-					<span>Checked names: {{ screenSize.checkedNames }}</span>
 					<li><label><input type="checkbox" name="screen-size" value="12.0" v-model="screenSize.checkedNames">12.0"</label></li>
 	        <li><label><input type="checkbox" name="screen-size" value="14.0" v-model="screenSize.checkedNames">14.0"</label></li>
 	        <li><label><input type="checkbox" name="screen-size" value="16.0" v-model="screenSize.checkedNames">16.0"</label></li>
@@ -83,13 +82,13 @@
 		 	<div class="widget">
 		 		<h3 class="headline">Цена</h3><span class="line"></span><div class="clearfix"></div>
 
-				<div id="price-range">
-					<div class="padding-range"><div id="slider-range"></div></div>
-					<label for="amount">Price:</label>
-					<input type="text" id="amount"/>
-					<a href="#" class="button color">филтър</a>
-				</div>
+				<ul class="categories">
+					<li><label><input type="checkbox" name="screen-size" value="0-200" v-model="price.range">0-200</label></li>
+	        <li><label><input type="checkbox" name="screen-size" value="200-400" v-model="price.range">200-400</label></li>
+	        <li><label><input type="checkbox" name="screen-size" value="400-1000" v-model="price.range">400-1000</label></li>
+				</ul>
 				<div class="clearfix"></div>
+
 		 	</div>
 	</div>
 	</div>
@@ -201,12 +200,11 @@
 				</ul>
 			</nav>
 		</div>
-
 	</div>
-
 </div>
 
 <div class="margin-top-15"></div>
+
 
 <!-- Footer Bottom / Start -->
 <div id="footer-component">
@@ -238,6 +236,7 @@
 <script src="../scripts/jquery.themepunch.showbizpro.min.js"></script>
 <script src="../scripts/jquery.magnific-popup.min.js"></script>
 <script src="../scripts/hoverIntent.js"></script>
+
 <script src="../scripts/superfish.js"></script>
 <script src="../scripts/jquery.pureparallax.js"></script>
 <script src="../scripts/jquery.pricefilter.js"></script>
@@ -253,6 +252,5 @@
 <script src="../scripts/puregrid.js"></script>
 <script src="../scripts/stacktable.js"></script>
 <script src="../scripts/custom.js"></script>
-
 </body>
 </html>

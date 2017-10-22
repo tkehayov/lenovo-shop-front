@@ -780,11 +780,11 @@
 				jQuery("#backtotop").fadeOut(fadeOutTime);
 			}
 		});
-			 
+
 		jQuery('#backtotop a').click(function(){
-			jQuery('html, body').animate({scrollTop:0}, scrollSpeed); 
-			return false; 
-		}); 
+			jQuery('html, body').animate({scrollTop:0}, scrollSpeed);
+			return false;
+		});
 
 
 
@@ -793,7 +793,7 @@
 		$('a.advanced-search-btn').click(function(e){
 			e.preventDefault();
 			$('.woo-search-elements').toggleClass('active');
-		}); 
+		});
 
 
 
