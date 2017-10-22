@@ -10,7 +10,8 @@ new Vue({
     },
     price: {
       range: []
-    }
+    },
+     products: []
   },
   mounted: function() {
     this.$watch('screenSize', function() {
@@ -28,8 +29,6 @@ new Vue({
       }),
 
       this.$watch('price', function() {
-        console.log("da");
-
         var priceArr = [];
 
         for (index in this.price.range) {
@@ -41,6 +40,7 @@ new Vue({
       }, {
         deep: true
       })
+    this.filter();
   },
 
   methods: {
@@ -49,15 +49,15 @@ new Vue({
 
       var categoriesUrl = "/categories/laptops?";
 
-      if (this.screenSizeData.length != 0) {
-        if (this.screenSizeData != undefined) {
+      if (this.screenSizeData != undefined) {
+        if (this.screenSizeData.length != 0) {
           query.append("screenSizes", this.screenSizeData);
         }
       } else {
         query.delete("screenSizes");
       }
-      if (this.priceData != 0) {
-        if (this.priceData != undefined) {
+      if (this.priceData != undefined) {
+        if (this.priceData.length != 0) {
           query.append("priceRange", this.priceData);
         }
       } else {
@@ -67,27 +67,10 @@ new Vue({
 
       this.$http.get(categoriesUrl).then(response => {
         if (response.body) {
-          // console.log(response.body);
+          this.products = response.body;
         }
       });
 
     }
   }
 })
-
-//TODO change url params
-// (function($) {
-//     // $(window).load(function () {
-//     //   var url = new URL(window.location);
-//     //
-//     //   searchParams = new URLSearchParams(url.search);
-//     //   model = searchParams.get('model');
-//     //   screenSize = searchParams.get('screenSize');
-//     //   priceFrom = searchParams.get('priceFrom');
-//     //   priceTo = searchParams.get('priceTo');
-//     //
-//     //   console.log("model", model);
-//     //   console.log("screenSize", screenSize);
-//     //   console.log("priceFrom", priceFrom);
-//     });
-// })(jQuery);
