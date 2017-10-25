@@ -119,9 +119,9 @@
 						<figure class="product">
 							<div class="mediaholder">
 								<a :href="'/product.html?id=' + product.id">
-						<img alt="" src="../images/shop_item_01.jpg"/>
+						<img alt="" :src="product.imagePreview"/>
 						<div class="cover">
-							<img alt="" src="../images/shop_item_01_hover.jpg"/>
+							<img alt="" :src="product.imagePreview"/>
 						</div>
 					</a>
 								<a :href="'/product.html?id=' + product.id" class="product-button"><i class="fa fa-eye"></i> Преглед</a>
