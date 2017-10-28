@@ -1,5 +1,5 @@
-Vue.component('header-top',{
-	template: `<!-- Top Bar
+Vue.component('header-top', {
+  template: `<!-- Top Bar
 ================================================== -->
 <div id="top-bar">
 	<div class="container">
@@ -28,30 +28,30 @@ Vue.component('header-top',{
 Vue.component('header-component', {
 
   data: function() {
-            return {
-                carts: {
-                	"shoppingCarts":[],
-                	"overallPrice": 0
-                }
-            }
-        },
+    return {
+      carts: {
+        "shoppingCarts": [],
+        "overallPrice": 0
+      }
+    }
+  },
   methods: {
 
-  	getCart: function(){
-  		 this.$http.get('/cart').then(response=>{
-  		 	if(response.body){
-           this.carts = response.body;
-           }
-           if(this.carts.overallPrice!=undefined){
-           	this.carts.overallPrice = Number((this.carts.overallPrice).toFixed(2));
-           }
-           return this.carts;
+    getCart: function() {
+      this.$http.get('/cart').then(response => {
+        if (response.body) {
+          this.carts = response.body;
+        }
+        if (this.carts.overallPrice != undefined) {
+          this.carts.overallPrice = Number((this.carts.overallPrice).toFixed(2));
+        }
+        return this.carts;
       });
-  }
-},
-mounted: function () {
-        this.getCart();
-    },
+    }
+  },
+  mounted: function() {
+    this.getCart();
+  },
   template: `<!-- Header
 ================================================== -->
 <div>
@@ -134,11 +134,10 @@ mounted: function () {
 							<div class="one-column">
 								<ul>
 									<li><span class="mega-headline">ThinkPad</span></li>
-									<li><a href="/categories/x1-thinkpad">X серия</a></li>
-									<li><a href="/categories/w-thinkpad">W серия</a></li>
-									<li><a href="/categories/p-thinkpad">P серия</a></li>
-									<li><a href="/categories/t-thinkpad">T серия</a></li>
-									<li><a href="faq.html">TODO ADD MORE LAPTOPS</a></li>
+									<li><a href="/category/laptops.html?series=x-thinkpad">X серия</a></li>
+									<li><a href="/category/laptops.html?series=w-thinkpad">W серия</a></li>
+									<li><a href="/category/laptops.html?series=p-thinkpad">P серия</a></li>
+									<li><a href="/category/laptops.html?series=t-thinkpad">T серия</a></li>
 								</ul>
 							</div>
 
@@ -241,7 +240,7 @@ new Vue({
 });
 
 Vue.component('footer-component', {
-	template: `
+  template: `
 <!-- Footer
    ================================================== -->
 <div>
@@ -254,7 +253,8 @@ Vue.component('footer-component', {
       <!-- Container / End -->
    </div>
 </div>
-`});
+`
+});
 
 new Vue({
   el: '#footer-component'
