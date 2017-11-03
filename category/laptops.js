@@ -2,6 +2,7 @@ var model;
 var screenSizeData = new Array();
 var priceData = new Array();
 var seriesData = new Array();
+var offsetData = 1;
 
 new Vue({
   el: '#filter',
@@ -68,6 +69,8 @@ new Vue({
       var location = window.location;
       var url = new URL(location);
       var series = url.searchParams.get("series");
+      var offset = url.searchParams.get("offset");
+      console.log(offset);
 
       var categoriesUrl = "/categories/laptops?";
 //Series
@@ -78,6 +81,16 @@ new Vue({
       } else {
         query.delete("series");
       }
+//offset
+      if (offset != undefined) {
+
+        if (offset > 0) {
+          console.log("offsetData1", offset);
+          query.append("offset", offset);
+        }
+      } else {
+        query.delete("offset");
+      }
 //Screen Size
       if (this.screenSizeData != undefined) {
         if (this.screenSizeData.length != 0) {
@@ -86,7 +99,7 @@ new Vue({
       } else {
         query.delete("screenSizes");
       }
-//Price      
+//Price
       if (this.priceData != undefined) {
         if (this.priceData.length != 0) {
           query.append("priceRange", this.priceData);
