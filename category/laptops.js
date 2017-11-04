@@ -2,7 +2,6 @@ var model;
 var screenSizeData = new Array();
 var priceData = new Array();
 var seriesData = new Array();
-var offsetData = 1;
 
 new Vue({
   el: '#filter',
@@ -16,7 +15,8 @@ new Vue({
     price: {
       range: []
     },
-    products: []
+    products: [],
+    page:1,
   },
   mounted: function() {
     this.$watch('screenSize', function() {
@@ -66,11 +66,11 @@ new Vue({
     filter: function() {
       query = new URLSearchParams();
 
+
       var location = window.location;
       var url = new URL(location);
       var series = url.searchParams.get("series");
-      var offset = url.searchParams.get("offset");
-      console.log(offset);
+      var page = url.searchParams.get("page");
 
       var categoriesUrl = "/categories/laptops?";
 //Series
@@ -81,15 +81,14 @@ new Vue({
       } else {
         query.delete("series");
       }
-//offset
-      if (offset != undefined) {
+//Page
+      if (this.page != undefined) {
 
-        if (offset > 0) {
-          console.log("offsetData1", offset);
-          query.append("offset", offset);
+        if (this.page > 0) {
+          query.append("page", this.page);
         }
       } else {
-        query.delete("offset");
+        query.delete("page");
       }
 //Screen Size
       if (this.screenSizeData != undefined) {
@@ -107,7 +106,9 @@ new Vue({
       } else {
         query.delete("priceRange");
       }
+
       categoriesUrl += query;
+      window.history.pushState({"pageTitle":"response.pageTitle"},"","laptops.html?"+ query.toString());
 
       this.$http.get(categoriesUrl).then(response => {
         if (response.body) {
@@ -115,6 +116,14 @@ new Vue({
         }
       });
 
-    }
+    },
+    nextPage: function(){
+      this.$root.$data.page++;
+      this.filter();
+    },
+    prevPage: function(){
+      this.$root.$data.page--;
+      this.filter();
+    },
   }
 })
