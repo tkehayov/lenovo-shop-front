@@ -1,6 +1,7 @@
 var model;
 var screenSizeData = new Array();
 var priceData = new Array();
+// TODO delete
 var seriesData = new Array();
 
 new Vue({
@@ -16,7 +17,7 @@ new Vue({
       range: []
     },
     products: [],
-    page:1,
+    limit:20,
   },
   mounted: function() {
     this.$watch('screenSize', function() {
@@ -70,25 +71,25 @@ new Vue({
       var location = window.location;
       var url = new URL(location);
       var series = url.searchParams.get("series");
-      var page = url.searchParams.get("page");
-
       var categoriesUrl = "/categories/laptops?";
+
 //Series
       if (this.seriesData != undefined) {
         if (this.seriesData.length != 0) {
+          console.log("daaa");
           query.append("series", this.seriesData);
         }
       } else {
         query.delete("series");
       }
-//Page
-      if (this.page != undefined) {
+//Limit
+      if (this.limit != undefined) {
 
-        if (this.page > 0) {
-          query.append("page", this.page);
-        }
+        // if (this.limit > 0) {
+          query.append("limit", this.limit);
+        // }
       } else {
-        query.delete("page");
+        query.delete("limit");
       }
 //Screen Size
       if (this.screenSizeData != undefined) {
@@ -108,7 +109,8 @@ new Vue({
       }
 
       categoriesUrl += query;
-      window.history.pushState({"pageTitle":"response.pageTitle"},"","laptops.html?"+ query.toString());
+      console.log(query.toString());
+      // window.history.pushState({"pageTitle":"response.pageTitle"},"","laptops.html?"+ query.toString());
 
       this.$http.get(categoriesUrl).then(response => {
         if (response.body) {
@@ -117,12 +119,9 @@ new Vue({
       });
 
     },
-    nextPage: function(){
-      this.$root.$data.page++;
-      this.filter();
-    },
-    prevPage: function(){
-      this.$root.$data.page--;
+
+    loadMore: function(){
+      this.$root.$data.limit+=10;
       this.filter();
     },
   }

@@ -46,13 +46,12 @@
 
 
 			<div class="parallax-content">
-				<h2>{{Име-на-категорията}}<span>{{Име-на-подкатегорията}}</span></h2>
+				<h2>Лаптопи</h2>
 
 				<nav id="breadcrumbs">
 					<ul>
 						<li><a href="/">Начало</a></li>
-						<li><a href="/{{Име-на-категорията}}">{{Име-на-категорията}}</a></li>
-						<li>{{Име-на-подкатегорията}}</li>
+						<li>лаптопи</li>
 					</ul>
 				</nav>
 			</div>
@@ -157,12 +156,8 @@
 					<!-- Pagination -->
 					<div class="pagination-container">
 
-						<nav class="pagination-next-prev">
-							<ul>
-								<li><a href="#" class="prev"  v-on:click="prevPage()" title="предишна"></a></li>
-								<li><a href="#" class="next" v-on:click="nextPage()" title="следваща"></a></li>
-							</ul>
-						</nav>
+						<div><a href="#" class="button" v-on:click="loadMore()">Зареди повече</a></div>
+						<div class="clearfix"></div>
 					</div>
 				</div>
 			</div>
